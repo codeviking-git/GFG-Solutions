@@ -1,0 +1,26 @@
+//
+class GfG
+{
+    Node flatten(Node root)
+    {
+        Node current=root;
+        void printBottom(Node current){
+	    while(current.bottom!=null){
+	        System.out.print(current.bottom.data+" ");
+	        current=current.bottom;
+	        return;
+	    }
+	    }
+	    if(current.bottom==null){
+	        System.out.print(current.next.data+" ");
+	        current=current.next;
+	         if(current.next==null){
+	             return;
+	         }
+	         else{
+	        current.printBottom();
+	    }
+    }
+}
+}
+//
