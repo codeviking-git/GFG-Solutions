@@ -1,0 +1,37 @@
+/*package whatever //do not write package name here */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class FindUnion {
+	public static void main (String[] args) {
+		int arr1[] = { 1, 2, 4, 5, 6 }; 
+        int arr2[] = { 2, 3, 5, 7 }; 
+        int m = arr1.length; 
+        int n = arr2.length; 
+        FindUnion(arr1, arr2, m, n); 
+	}
+    static int FindUnion(int arr1[], int arr2[], int m, int n){
+        int i=0;
+        int j=0;
+        while(i<m || j<n){
+            if(arr1[i]>arr2[j]){
+                System.out.print(arr2[j++] + " "); 
+            }
+            if(arr1[i]<arr2[j]){
+                System.out.print(arr2[i++] + " "); 
+            }
+        }
+        while(i<m){
+            System.out.print(arr1[i++] + " "); 
+        }
+        while(j<n){
+            System.out.print(arr2[j++] + " ");
+        }
+        return 0;
+    }
+}
+
+    
+
